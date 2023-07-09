@@ -16,4 +16,4 @@ if (1 <= number && number <= 7)
         Console.Write("нет");
     }
 }
-else  Console.Write("Введено число не от 1 до 7");
+else Console.Write("Введено число не от 1 до 7");
