@@ -2,3 +2,12 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
+Console.WriteLine("Введите трёхзначное число: ");
+int number = int.Parse(Console.ReadLine()!);
+
+void SecondNumber(int number)
+{
+    number = number / 10 % 10;
+    Console.Write($"-> {number}");
+}
+SecondNumber(number);
