@@ -2,3 +2,35 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
+Console.Write("Введите число:");
+int number = int.Parse(Console.ReadLine());
+
+void ThirdNumber(int number)
+{
+    if (number >= 100 || number <= -100)
+    {
+        if (number >= 100)
+        {
+            while (number > 999)
+            {
+            number = number / 10;
+            }
+            number = number % 10;
+            Console.Write($"-> {number}");
+        }
+        else
+        {
+            while (number < -999)
+            {
+            number = number / 10;
+            }
+            number = -number % 10;
+            Console.Write($"-> {number}");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Третьей цифры нет.");
+    }
+}
+ThirdNumber(number);
