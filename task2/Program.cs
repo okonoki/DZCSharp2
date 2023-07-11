@@ -7,26 +7,23 @@ int number = int.Parse(Console.ReadLine());
 
 void ThirdNumber(int number)
 {
-    if (number >= 100 || number <= -100)
+    if (number >= 100)
     {
-        if (number >= 100)
+        while (number > 999)
         {
-            while (number > 999)
-            {
-                number = number / 10;
-            }
-            number = number % 10;
-            Console.Write($"-> {number}");
+            number = number / 10;
         }
-        else
+        number = number % 10;
+        Console.Write($"-> {number}");
+    }
+    else if (number <= -100)
+    {
+        while (number < -999)
         {
-            while (number < -999)
-            {
-                number = number / 10;
-            }
-            number = -number % 10;
-            Console.Write($"-> {number}");
+            number = number / 10;
         }
+        number = -number % 10;
+        Console.Write($"-> {number}");
     }
     else
     {
